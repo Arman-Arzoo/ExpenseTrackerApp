@@ -1,12 +1,17 @@
 import './App.css';
-import Heading from "./components/Heading";
-import Balance from "./components/Balance";
+import Header from "./components/Header"
+import ExpenseInfo from "./components/ExpenseInfo";
+import ExpenseHistory from "./components/ExpenseHistory";
+
 
 function App() {
   return (
     <div className="main-container">
-        <Heading/>
-        <Balance/>
+        <Header/>
+        <ExpenseInfo/>
+        <ExpenseHistory/>
+        
+        
     </div>
   );
 }

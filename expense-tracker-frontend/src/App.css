@@ -1,24 +1,52 @@
 
 .main-container{
- padding: 20px;
+  display:flex;
+  flex-direction: column;
+  
+}
+/* header for expense tracker app */
+.expense-header{
+  display: flex;
+  justify-content: space-between;
+  background-color:white;
+  height: 5rem;
+  width: 100%;
+  box-shadow: 0 0 5px;
+}
+.expense-header h2{
+  padding-left: 23px;
+}
+/* expense tracker app balance */
+.expense-balance{
+  display: flex;
+  padding-right: 23px;
+}
+.expense-balance h3{
+  padding-right: 15px;
+}
+
+/*expense tracker app info  */
+.expense-info{
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  width: 600px;
+  box-shadow: 0 0 5px;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+/* expense tracker app history */
+.history{
+  margin: 1rem;
+}
+.expense-history{
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  padding:0 1rem ;
+  font-size: 1.5rem;
+  box-shadow: 0 0 5px;
   
 }
 
-/* Heading of expense tracker app */
-.expense-heading{
-  text-align: center;
-  width: 20%;
-  margin: 0 auto;
-  background-color: white;
-  padding: 0.05px;
-  border-radius: 15px;
-  /* box-shadow: 0 0 10px black; */
- 
-}
-
-/* expense tracker app balance */
-
-.expense-balance{
-  padding-left: 60px;
-  padding-top: 50px;
-}
