@@ -1,4 +1,24 @@
 
 .main-container{
+ padding: 20px;
   
+}
+
+/* Heading of expense tracker app */
+.expense-heading{
+  text-align: center;
+  width: 20%;
+  margin: 0 auto;
+  background-color: white;
+  padding: 0.05px;
+  border-radius: 15px;
+  /* box-shadow: 0 0 10px black; */
+ 
+}
+
+/* expense tracker app balance */
+
+.expense-balance{
+  padding-left: 60px;
+  padding-top: 50px;
 }

@@ -1,10 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
+import Heading from "./components/Heading";
+import Balance from "./components/Balance";
 
 function App() {
   return (
     <div className="main-container">
-       <h1> Welcome to Expense tracker App</h1>
+        <Heading/>
+        <Balance/>
     </div>
   );
 }
