@@ -12,6 +12,12 @@
   height: 5rem;
   width: 100%;
   box-shadow: 0 0 5px;
+  top:0;
+  right: 0;
+  position: fixed; 
+}
+.header {
+  margin-top: 60px;
 }
 .expense-header h2{
   padding-left: 23px;
@@ -20,6 +26,7 @@
 .expense-balance{
   display: flex;
   padding-right: 23px;
+  
 }
 .expense-balance h3{
   padding-right: 15px;
@@ -33,20 +40,66 @@
   width: 600px;
   box-shadow: 0 0 5px;
   margin: 0 auto;
+
   margin-top: 2rem;
 }
 
 /* expense tracker app history */
 .history{
-  margin: 1rem;
+ 
+  margin: 0 auto;
+  width: 600px;
 }
-.expense-history{
-  display: flex;
-  background-color: white;
-  justify-content: space-between;
-  padding:0 1rem ;
+.expense-history {
+ 
+
+ 
+padding: 0;
+
+ 
+}
+.expense-history li{
+  
   font-size: 1.5rem;
   box-shadow: 0 0 5px;
+  margin-bottom: 15px;
+  padding: 0 8px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  
+
   
 }
 
+/* expense form */
+
+
+.expense-form{
+  margin: 0 auto;
+  width: 600px;
+  
+}
+form input[type="text"]{
+  width: 580px;
+  padding: 0.5rem;
+}
+
+form input[type="submit"]{
+  margin-top: 1rem;
+  margin-left: 14rem;
+  font-size: large;
+  padding: 0.5rem ;
+}
+
+/* expense Footer */
+.expense-footer{
+  background-color: white;
+  height: 3.5rem;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+ 
+}
