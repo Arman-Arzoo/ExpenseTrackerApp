@@ -2,7 +2,7 @@ import React from "react";
 
 function ExpenseForm() {
 
-const handelAddition= (event) =>{
+const haddelAddition= (event) =>{
     event.preventDefault();
 
 }

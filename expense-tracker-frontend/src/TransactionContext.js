@@ -9,9 +9,10 @@ const initialTransaction = [
 
 export const TransContext = createContext(initialTransaction)
 
-let [state , dispatch]= useReducer(TransactionReducer.initialTransaction);
+
 
 export const TransactionProvider = ({Childern})=>{
+    let [state , dispatch]= useReducer(TransactionReducer.initialTransaction);
     function addTransaction(transObj){
         dispatch({
             type: "addTransaction",
