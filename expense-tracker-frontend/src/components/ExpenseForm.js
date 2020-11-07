@@ -1,10 +1,26 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import {TransContext} from "../TransactionContext";
+
 
 function ExpenseForm() {
+    let {add} = useContext(TransContext);
+
+    let [newDesc, setDesc]= useState("");
+    let [newAmount, setAmount]= useState(0);
+
+
+
+
 
 const haddelAddition= (event) =>{
     event.preventDefault();
+    
+    add({
+        amount:Number(newAmount),
+        desc:newDesc
+    })
 
+    
 }
 
     return (
@@ -16,12 +32,12 @@ const haddelAddition= (event) =>{
                 <form onSubmit={haddelAddition}>
                     <label> Description </label>
                     <br/> 
-                    <input type="text" required/>
+                    <input type="text" required onChange={(ev)=>{setDesc(ev.target.value)}}/>
                     <br/>   
 
                     <label> Amount </label>
                     <br/> 
-                    <input type="text" required/>
+                    <input type="text" required onChange={(ev)=>{setAmount(ev.target.value)}}/>
                     <br/> 
                     <input type="submit" value="Add Transaction"></input>
                     

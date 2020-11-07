@@ -3,32 +3,33 @@ import TransactionReducer from "./TransactionReducer";
 
 
 const initialTransaction = [
-    {amount: 550 , desc :"cake"}
+    {amount: 55000 , desc :"salary"},
+    {amount: -100 , desc :"egg"}
 ]
 
 
-export const TransContext = createContext(initialTransaction)
+export const TransContext = createContext(initialTransaction);
 
 
 
-export const TransactionProvider = ({Childern})=>{
-    let [state , dispatch]= useReducer(TransactionReducer.initialTransaction);
-    function addTransaction(transObj){
+export const TransactionProvider = ({children})=>{
+    let [state , dispatch]= useReducer(TransactionReducer,initialTransaction);
+
+    const  add =(transObj)=>{
+           
         dispatch({
-            type: "addTransaction",
+            type: "add-transaction",   
             payload:{
                 amount:transObj.amount,
                 desc:transObj.desc
             },
-        })
+        });
     }
     return(
-        <TransContext.Provider value={{
-            transaction:state,
-            addTransaction
-        }}>
+        <TransContext.Provider value={{ transactions:state,add}}>
 
-          {Childern} 
+          {children} 
+
         </TransContext.Provider>
     )
 

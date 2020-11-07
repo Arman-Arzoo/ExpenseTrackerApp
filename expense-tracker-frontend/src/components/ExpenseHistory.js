@@ -5,10 +5,7 @@ import {TransContext } from "../TransactionContext";
 
 function ExpenseHistory() {
 
-    let transactions = useContext(TransContext);
-
-    
-
+    let {transactions} = useContext(TransContext);
 
     return (
         <div className="history">
@@ -19,9 +16,9 @@ function ExpenseHistory() {
                {
                transactions.map((obj,ind)=>{
                 return (
-                <li>
+                <li key="ind">
                 <span>{obj.desc} </span>
-                <span>{obj.amount}</span>
+                <span>${obj.amount}</span>
                 </li>
                 )
 

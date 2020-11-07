@@ -14,6 +14,9 @@ const expenseApp = express();
 expenseApp.use(express.json());
 expenseApp.use(cors());
 
+expenseApp.use("/users",require("./userRoutes.js/userRoute"))
+
+
 const port = process.env.PORT || 4000;
 
 expenseApp.listen(port, ()=>{console.log("server started at http://localhost:4000")});
