@@ -4,7 +4,7 @@ const { createContext, useReducer } = require("react")
 
 // initial Transtion
 const initialState = {
-        transaction:[
+        transactions:[
             {id:1, text:"flower",amount:-20 },
             {id:2, text:"cake",amount:45 },
             {id:3, text:"flower",amount:-10}
