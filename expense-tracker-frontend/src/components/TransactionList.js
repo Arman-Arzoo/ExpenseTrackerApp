@@ -14,7 +14,7 @@ export const TransactionList = () => {
         {
           transactions.map(transaction=>{
             return(
-              <Transaction key={transaction.key} transaction={transaction}/>
+              <Transaction key={transaction.id} transaction={transaction}/>
 
             )})
         }
