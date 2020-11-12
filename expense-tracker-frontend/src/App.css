@@ -55,7 +55,7 @@ h4 {
 }
 
 .inc-exp-container > div:first-of-type {
-  border-right: 1px solid #dedede;
+  border-right: 1px solid #dedede;  
 }
 
 .money {
@@ -127,7 +127,7 @@ input[type='number'] {
 }
 
 .list li.minus {
-  border-right: 5px solid #c0392b;
+  border-right : 5px solid #c0392b;
 }
 
 .delete-btn {
@@ -141,9 +141,9 @@ input[type='number'] {
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translate(-100%, -50%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+    transform: translate(-100%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .list li:hover .delete-btn {
