@@ -15,6 +15,10 @@ const app = express();
 app.use(express.json());
 app.use('/api/v1/transactions',transRouter);
 
+if(process.env.NODE_ENV == "development"){
+    app.use(morgan("dev"));
+}
+
 
 const PORT = process.env.PORT;
 const NODE_ENV = process.env.NODE_ENV;

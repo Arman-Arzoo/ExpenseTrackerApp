@@ -4,8 +4,10 @@
   "description": "backend for the expense tracker app",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server",
-    "server": "nodemon server"
+    "start": "node server",
+    "server": "nodemon server",
+    "client":"npm start --prefix expense-tracker-frontend",
+    "dev":"concurrently \"npm run server\"   \"npm run client\""
   },
   "repository": {
     "type": "git",
