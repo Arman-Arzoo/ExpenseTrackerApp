@@ -1,3 +1,4 @@
+const path = require("path")
 const express = require("express");
 const dotenv = require("dotenv");
 const colors = require("colors");
@@ -13,10 +14,18 @@ const transRouter = require('./routes/transRouter')
 const app = express();
 
 app.use(express.json());
-app.use('/api/v1/transactions',transRouter);
 
 if(process.env.NODE_ENV == "development"){
     app.use(morgan("dev"));
+}
+
+app.use('/api/v1/transactions',transRouter);
+
+if(process.env.NODE_ENV == "production"){
+    app.use(express.static('expense-tracker-frontend/build'));
+    app.get('*', (req,res)=>{
+        res.sendFile(path.resolve(__dirname, 'expense-tracker-frontend','build','index.html'));
+    });
 }
 
 
