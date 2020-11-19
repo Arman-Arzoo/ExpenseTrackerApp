@@ -10,6 +10,7 @@ const initialState = {
         loading:true
 }
 
+
 //  create Context
 
 export const GlobalContext = createContext(initialState);
@@ -24,7 +25,6 @@ export const GlobalProvider = ({children})=>{
     async function getTransactions(){
         try {
             const res = await axios.get("/api/v1/transactions");
-
             dispatch({
                 type:'get-transactions',
                 payload:res.data.data
@@ -75,7 +75,6 @@ export const GlobalProvider = ({children})=>{
       try {
 
         const response = await axios.post("api/v1/transactions",transaction,config);
-        console.log("response",response);
          
         dispatch({
             type:"add-transaction",
@@ -87,9 +86,10 @@ export const GlobalProvider = ({children})=>{
       } catch (err) {
         dispatch({
             type:'error-transactions',
-            payload:err.response.data.error   
+            payload:err.response.data.erorr   
 
         });
+        console.log(err.response.data.erorr)
           
       }
 
